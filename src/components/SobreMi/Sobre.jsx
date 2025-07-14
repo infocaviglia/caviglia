@@ -1,13 +1,28 @@
 import React from "react";
+import "./Sobre.css";
 
 const Sobre = () => {
   return (
-    <div style={{textAlign:"-webkit-center"}}>
-      <section className="max-w-7xl mx-auto bg-white shadow-md rounded-2xl p-6 mt-10 place-items-center">
-        <h2 className="mb-4 text-3xl md:text-4xl text-center tracking-tight font-extrabold text-tertiary uppercase">nuestra historia</h2>
-        <div className="px-10 py-1 mb-4 text-center bg-tertiary uppercase w-1/4"></div>
-        <article className="flex gap-4">
-          <div className="px-4 align-middle items-center text-start content-center">
+    <div className="w-screen h-auto overflow-hidden">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 text-center items-center  place-items-center mb-4">
+        <h2 className='text-pink font-normal tracking-widest uppercase ls-51 mb-4 text-3xl md:text-4xl text-center text-tertiary'>nuestra hiostoria</h2>
+        <div className="px-10 py-1 mb-4 text-center place-items-center bg-tertiary uppercase w-1/4"></div>
+      </div> */}
+      <section className="relative w-full h-full flex flex-col lg:flex-row">
+        {/* IMAGE for mobile view (visible only in mobile) */}
+        <div className="w-full h-64 lg:hidden">
+          <img
+            src='/images/cavigliaPortada.webp'
+            alt='foto del frente del local'
+            title='foto del frente del local'
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* TEXT SECTION */}
+        <div className="w-full lg:w-1/2 flex items-center lg:items-start justify-center p-8 lg:py-1 lg:px-8 bg-white z-10">
+          <div className="max-w-xl">
+
             <p className="text-gray-700 mb-4">
               Fundada en <strong>1979</strong> en Mar del Plata, <strong>Repuestos Caviglia</strong> ha sido sinónimo de calidad y compromiso en el rubro de repuestos para camiones y maquinaria pesada.
             </p>
@@ -21,11 +36,19 @@ const Sobre = () => {
               Actualmente, estamos ubicados en <strong>Av. Champagnat 1167</strong>, Mar del Plata, y seguimos trabajando con la misma pasión de siempre, acompañando al sector en cada kilómetro.
             </p>
           </div>
-          <div className=" rounded-md">
-            <img src='/images/cavigliaPortada.webp' alt='foto del frente del local' title='foto del frente del local' className="w-full rounded-2xl shadow-md" />
-          </div>
-        </article>
+        </div>
 
+        {/* IMAGE with diagonal for md+ screens only */}
+        <div className="hidden lg:block w-1/2 relative">
+          <div className="w-full h-96 diagonal-clip">
+            <img
+              src='/images/cavigliaPortada.webp'
+              alt='foto del frente del local'
+              title='foto del frente del local'
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -7,7 +7,9 @@ const useLinks = () => {
     return [
         {name: 'Home', href: queryString? '?' + queryString + '#home':'#home'},
         {name: 'Nosotros', href: queryString? '?' + queryString +'#sobre':'#sobre'},
-        {name: 'Contacto', href: queryString? '?' + queryString +'#contacto':'#contacto'}
+        {name: 'FOTOS', href: queryString? '?' + queryString +'#fotos':'#fotos'},
+        {name: 'Contacto', href: queryString? '?' + queryString +'#contacto':'#contacto'},
+
     ];
 };
 

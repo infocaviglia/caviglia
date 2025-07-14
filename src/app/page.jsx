@@ -14,6 +14,7 @@ import Loading from "../components/Loading/Loading";
 import SearchBase from "../components/Search/SearchBase";
 import { defaultMetadata } from '../lib/metadata';
 import fetchProduct from '../Utils/fetchProduct';
+import Gallery from "../components/Gallery";
 
 //import UnderConstruction from "@/components/sitioEnConstruccion/UnderConstruction";
 
@@ -69,8 +70,9 @@ export default function Home() {
         </Suspense> */}
           {/* <Carrusel /> */}
           <Sobre/>
-          <Contact />
           <Ubicacion/>
+          <Gallery />
+          <Contact />
       </main>
       <footer>
         <Footer />
